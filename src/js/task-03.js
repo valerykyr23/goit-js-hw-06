@@ -31,14 +31,16 @@ images.forEach(image => {
 
   const pic = document.createElement("img");
  
-
-  pic.setAttribute("src", image.url)
-  pic.setAttribute("alt", image.alt)
+  pic.classList.add("gallery-img");
+  pic.setAttribute("src", image.url);
+  pic.setAttribute("alt", image.alt);
+  
 
   const liso = document.createElement("li");
   
   liso.insertAdjacentElement("afterbegin", pic);
-  liso.classList.add("galery-item");
+  liso.classList.add("gallery-item");
+  
   
   listWithPics.append(liso);
 })
