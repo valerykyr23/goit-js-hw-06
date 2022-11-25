@@ -1,7 +1,6 @@
 
 
 const bts = document.querySelectorAll("button");
-console.log(bts);
 
 
 
