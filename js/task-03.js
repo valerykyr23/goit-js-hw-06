@@ -13,52 +13,9 @@ const images = [
   },
 ];
 
-// 1st variant
+const listWithPics = document.querySelector('.gallery');
 
+const markup = images.map(image => `<li><img class="gallery-img" src=${image.url} alt='${image.alt}'></img></li>`)
+  .join('');
 
-const listWithPics = document.querySelector(".gallery");
-console.log(listWithPics);
-
-
-images.forEach(image => {
-
-
-  const pic = document.createElement("img");
- 
-  
-  pic.classList.add("gallery-img");
-  pic.setAttribute("src", image.url);
-  pic.setAttribute("alt", image.alt);
-  
-
-  const liso = document.createElement("li");
-  liso.insertAdjacentElement("afterbegin", pic);
-  liso.classList.add("gallery-item");
-  
-  
-  listWithPics.append(liso);
-  
-})
-
-
-
-// 2d variant
-
-
-
-// const list = document.querySelector('.gallery')
-
-// const markup = images
-// 	.map(image => `<li><img class="picture" src=${image.url} width = '400' alt='${image.alt}'></img></li>`)
-// 	.join('')
-
-//   list.insertAdjacentHTML('beforeend', markup)
-//     // const img = document.createElement('img')
-  
-// const pictures = document.querySelectorAll('.picture')
-
-// list.style.display = 'flex';
-// list.style.flexWrap = 'column-reverse'
-// list.style.listStyle = 'none'
-// list.style.gap = '20px'
-// list.style.justifyContent = 'center'
+listWithPics.insertAdjacentHTML('beforeend', markup);

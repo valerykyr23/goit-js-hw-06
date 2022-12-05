@@ -21,11 +21,11 @@ console.log(listWithIngr);
   liForList.textContent = ingredient;
   liForList.classList.add("item");
 
-    console.log(liForList);
-    listWithIngr.append(liForList);
-
+return liForList; 
 
 })
+
+listWithIngr.append(...liForList);
 
 
 
